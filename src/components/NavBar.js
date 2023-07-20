@@ -1,9 +1,21 @@
-import React from "react";
+import React from 'react'
 
-function NavBar() {
+const NavBar = () => {
   const links = ["home", "about", "projects"];
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
+
+  let elements = links.map((link, index) => {
+    return <a key={index} href={link}>{link}</a>
+  })
+
+
+
+  return <nav>{elements}</nav>
+
+
+
+
+
 }
 
-export default NavBar;
+export default NavBar
